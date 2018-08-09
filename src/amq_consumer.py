@@ -21,7 +21,6 @@
 from __future__ import print_function
 import optparse
 import os
-import time
 from proton.handlers import MessagingHandler
 from proton.reactor import Container
 
@@ -44,7 +43,6 @@ class Recv(MessagingHandler):
             print(event.message.body)
             self.received += 1
 
-            time.sleep(1.0)
             if self.received == self.expected:
                 event.receiver.close()
                 event.connection.close()
