@@ -66,7 +66,7 @@ if __name__ == "__main__":
         
 
     try:
-        Container(Recv(opts.address, opts.messages)).run()
+        Container(Recv(addr, opts.messages)).run()
     except KeyboardInterrupt: pass
 
 
