@@ -48,8 +48,7 @@ class Recv(MessagingHandler):
                 event.connection.close()
 
 parser = optparse.OptionParser(usage="usage: %prog [options]")
-parser.add_option("-a", "--address", default="localhost:5672/examples",
-                  help="address from which messages are received (default %default)")
+parser.add_option("-a", "--address", help="address from which messages are received (default %default)")
 parser.add_option("-m", "--messages", type="int", default=100,
                   help="number of messages to receive; 0 receives indefinitely (default %default)")
 opts, args = parser.parse_args()
