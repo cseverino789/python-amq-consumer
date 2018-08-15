@@ -142,7 +142,6 @@ objects:
         from:
           kind: ImageStreamTag
           name: python-amq-consumer:latest
-          namespace: my-test-project
       type: ImageChange
     - type: ConfigChange
   status:
